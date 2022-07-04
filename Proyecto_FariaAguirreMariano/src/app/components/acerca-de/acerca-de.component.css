@@ -1,9 +1,39 @@
+.row{
+    height: 300px;
+}
 div{
-    background-color: #130d0d;
+    background-color: #3a3636;
+    text-align: center;
 }
 p{
     font-family: 'Times New Roman', Times, serif;
+    font-size: 150%;
 }
-h1{
-    font-family:'Times New Roman', Times, serif ;
+/*Estilo de foto de perfil*/
+@media (min-width: 576px){
+    #fotodeperfil{
+        position: absolute;
+        width: 15%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px cornflowerblue;
+        left: 1%;
+        top: 500px;
+    }
+}
+@media (max-width: 575px){
+    #fotodeperfil{
+        position: absolute;
+        width: 25%;
+        border-radius: 100%;
+        box-shadow: 3px 3px 3px cornflowerblue;
+        left: 38%;
+        top: 414px;
+    }
+}
+/*Etiqueta nombre*/ 
+#nombre{
+    font-weight: bold;
+    margin-top: 10%;
+    margin-left: 10px;
+    letter-spacing: normal;
 }

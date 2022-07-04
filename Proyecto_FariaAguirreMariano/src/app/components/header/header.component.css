@@ -1,5 +1,7 @@
 div{
     background-color: #3a3636;
+    height: max-content;
+    width: 100%;
 }
 app-social{
     float:right 
