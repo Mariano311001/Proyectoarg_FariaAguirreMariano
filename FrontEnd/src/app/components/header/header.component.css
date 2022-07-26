@@ -1,8 +1,10 @@
 div{
     background-color: #3a3636;
-    height: max-content;
     width: 100%;
+    height: auto;
 }
+
 app-social{
-    float:right 
+    float: right;
+    margin-top: 25px;
 }
