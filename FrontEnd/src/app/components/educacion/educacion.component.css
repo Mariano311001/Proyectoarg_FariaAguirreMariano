@@ -2,9 +2,9 @@
     padding: 20px;
 }
 div{
-    background-color:#3a3636;
+    background-color:#000000 ;
 }
 h1, h3{
 display: inline;
-font-weight: 100;
+font-weight: 100px;
 }

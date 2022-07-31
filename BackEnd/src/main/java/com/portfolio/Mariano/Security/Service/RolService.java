@@ -12,14 +12,14 @@ import org.springframework.stereotype.Service;
 @Service
 @Transactional
 public class RolService {
-   @Autowired
-   IRolRepository IrolRepository;
-   
-   public Optional<Rol> getByRolNombre(RolNombre rolNombre){
-       return IrolRepository.findByRolNombre(rolNombre);
-   }
-   public void save (Rol rol){
-       IrolRepository.save(rol);
-   }
+    @Autowired
+    IRolRepository irolRepository;
+    
+    public Optional<Rol> getByRolNombre(RolNombre rolNombre){
+     return irolRepository.findByRolNombre(rolNombre);   
+    }
+    
+    public void save(Rol rol){
+        irolRepository.save(rol);
+    }
 }
-

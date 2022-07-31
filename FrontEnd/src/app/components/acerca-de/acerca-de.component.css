@@ -3,12 +3,14 @@ head{
     height: 500px;
 }
 .row{
-    padding:10px;
+    padding:50px;
+    width: auto;
+    background-color: #000000;
 }
 div{
-    background-color:#3a3636 ;
+    background-color: #025b15 ;
     text-align: center;
-    box-shadow: 10px 10px 10px #2f00ff;
+    box-shadow: 2px -5px 10px #05721d ;
 }
 .acerca{  
           text-align: center;
@@ -29,9 +31,9 @@ p{
         position: absolute;
         width: 13%;
         border-radius: 100%;
-        box-shadow: 3px 3px 3px cornflowerblue;
-        left: 1%;
-        top: 555px;
+        box-shadow: 3px 5px 3px rgb(255, 255, 255);
+        left: 4%;
+        top: 650px;
     }
 }
 @media (max-width: 575px){

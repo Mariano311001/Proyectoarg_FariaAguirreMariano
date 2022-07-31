@@ -1,6 +1,9 @@
 
 package com.portfolio.Mariano.Security.Controller;
 
+import com.portfolio.Mariano.Security.Dto.JwtDto;
+import com.portfolio.Mariano.Security.Dto.LoginUsuario;
+import com.portfolio.Mariano.Security.Dto.NuevoUsuario;
 import com.portfolio.Mariano.Security.Entity.Rol;
 import com.portfolio.Mariano.Security.Entity.Usuario;
 import com.portfolio.Mariano.Security.Enums.RolNombre;
@@ -46,13 +49,13 @@ public class AuthController {
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos o email invalido"),HttpStatus.BAD_REQUEST);
         
-        if(usuarioService.existsByNombreUsuario(nombreUsuario.getNombreUsuario()))
+        if(usuarioService.existsByNombreUsuario(nuevoUsuario.getNombreUsuario()))
             return new ResponseEntity(new Mensaje("El nombre de usuario ya existe"), HttpStatus.BAD_REQUEST);
-        if(usuarioService.existsByEmail(nombreUsuario.getEmail()))
+        if(usuarioService.existsByEmail(nuevoUsuario.getEmail()))
             return new ResponseEntity(new Mensaje("El email ya existe"), HttpStatus.BAD_REQUEST);
         
         Usuario usuario = new Usuario(nuevoUsuario.getNombre(),nuevoUsuario.getNombreUsuario(),
-            nuevoUsuario.getEmial(),passwordEncoder.encode(nuevoUsuario.getPassword()));
+            nuevoUsuario.getEmail(),passwordEncoder.encode(nuevoUsuario.getPassword()));
     
         Set<Rol> roles= new HashSet<>();
         roles.add(rolService.getByRolNombre(RolNombre.ROLE_USER).get());
@@ -65,7 +68,7 @@ public class AuthController {
     return new ResponseEntity(new Mensaje("Usuario guardado"), HttpStatus.CREATED);
     }
     @PostMapping("/login")
-    public ResponseEntity<JwtDTO> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
+    public ResponseEntity<JwtDto> login(@Valid @RequestBody LoginUsuario loginUsuario, BindingResult bindingResult){
         if(bindingResult.hasErrors())
             return new ResponseEntity(new Mensaje("Campos mal puestos"),HttpStatus.BAD_REQUEST);
         
@@ -80,4 +83,4 @@ public class AuthController {
         
         JwtDto jwtDto = new JwtDto(jwt, userDetails.getUsername(), userDetails.getAuthorities());
         return new ResponseEntity(jwtDto,HttpStatus.OK);
-}
+}}
