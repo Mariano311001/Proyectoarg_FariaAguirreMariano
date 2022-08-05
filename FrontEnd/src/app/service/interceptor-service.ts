@@ -1,10 +1,7 @@
 import { TokenService } from "./token.service";
 import { HttpEvent ,HttpHandler, HttpRequest, HTTP_INTERCEPTORS} from "@angular/common/http";
 import {Observable} from "rxjs";
-import {Injectable} from "@angular/core";
-@Injectable({
-  providedIn: 'root'
-})
+
 export class InterceptorService {
   constructor(private tokenService: TokenService){}
 
