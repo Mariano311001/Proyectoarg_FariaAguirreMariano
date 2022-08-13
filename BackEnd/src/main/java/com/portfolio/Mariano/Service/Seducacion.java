@@ -46,4 +46,3 @@ public class Seducacion {
         return rEducacion.existsByNombreE(nombreE);
     }
 }
-
