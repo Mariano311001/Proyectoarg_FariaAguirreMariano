@@ -6,9 +6,9 @@ import javax.validation.constraints.NotBlank;
 
 public class dtoEducacion {
     @NotBlank
-   private String nombreE;
+    private String nombreE;
     @NotBlank
-   private String descripcionE;
+    private String descripcionE;
 
     public dtoEducacion() {
     }
@@ -33,7 +33,6 @@ public class dtoEducacion {
     public void setDescripcionE(String descripcionE) {
         this.descripcionE = descripcionE;
     }
-   
     
     
 }

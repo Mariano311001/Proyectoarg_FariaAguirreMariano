@@ -19,25 +19,31 @@ public class Seducacion {
     REducacion rEducacion;
     
     public List<Educacion> list(){
-     return rEducacion.findAll();
+        return rEducacion.findAll();
     }
     
     public Optional<Educacion> getOne(int id){
-        return rEducacion.findById(id);}
+        return rEducacion.findById(id);
+    }
     
     public Optional<Educacion> getByNombreE(String nombreE){
-        return rEducacion.findByNombreE(nombreE);}
+        return rEducacion.findByNombreE(nombreE);
+    }
     
     public void save(Educacion educacion){
-        rEducacion.save(educacion);}
+        rEducacion.save(educacion);
+    }
     
     public void delete(int id){
-        rEducacion.deleteById(id);}
-
+        rEducacion.deleteById(id);
+    }
+    
     public boolean existsById(int id){
-        return rEducacion.existsById(id);}
-
-    public boolean existsByNombreE (String nombreE){
-        return rEducacion.existsByNombreE(nombreE);}
+        return rEducacion.existsById(id);
+    }
+    
+    public boolean existsByNombreE(String nombreE){
+        return rEducacion.existsByNombreE(nombreE);
+    }
 }
 
