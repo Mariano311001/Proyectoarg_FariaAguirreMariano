@@ -9,27 +9,31 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class EditeducacionComponent implements OnInit {
   educacion: Educacion = null;
-
+  
   constructor(
     private educacionS: EducacionService,
-    private router: Router,
-    private activatedRouter: ActivatedRoute,
+    private activatedRouter : ActivatedRoute,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
     const id = this.activatedRouter.snapshot.params['id'];
-    this.educacionS.details(id).subscribe(
-      data => { this.educacion = data;}
-      , err=>{alert("Error al modificar");
-    this.router.navigate(['']);}
+    this.educacionS.detail(id).subscribe(
+      data =>{
+        this.educacion = data;
+      }, err =>{
+         alert("Error al modificar");
+         this.router.navigate(['']);
+      }
     )
   }
+
   onUpdate(): void{
     const id = this.activatedRouter.snapshot.params['id'];
     this.educacionS.update(id, this.educacion).subscribe(
       data => {
-        this.router.navigate(['']);   
-      }, err=>{
+        this.router.navigate(['']);
+      }, err => {
         alert("Error al modificar la educacion");
         this.router.navigate(['']);
       }

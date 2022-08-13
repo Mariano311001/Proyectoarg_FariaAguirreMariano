@@ -6,16 +6,16 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'http://localhost:8080/educacion/';
+  URL = 'https://localhost:8080/';
 
-  constructor(private  httpClient: HttpClient) { }
+  constructor(private httpClient : HttpClient) { }
 
   public lista(): Observable<Educacion[]>{
     return this.httpClient.get<Educacion[]>(this.URL + 'lista');
   }
 
-  public details (id: number): Observable<Educacion>{
-   return this.httpClient.get<Educacion>(this.URL + `details/${id}`);
+  public detail(id: number): Observable<Educacion>{
+    return this.httpClient.get<Educacion>(this.URL + `detail/${id}`);
   }
 
   public save(educacion: Educacion): Observable<any>{
@@ -23,7 +23,7 @@ export class EducacionService {
   }
 
   public update(id: number, educacion: Educacion): Observable<any>{
-    return this.httpClient.put<any>(this.URL + `update${id}`, educacion);
+    return this.httpClient.put<any>(this.URL + `update/${id}`, educacion);
   }
 
   public delete(id: number): Observable<any>{
