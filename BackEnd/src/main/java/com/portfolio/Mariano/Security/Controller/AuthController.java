@@ -62,6 +62,7 @@ public class AuthController {
         
         if(nuevoUsuario.getRoles().contains("admin"))
             roles.add(rolService.getByRolNombre(RolNombre.ROLE_ADMIN).get());
+        
     usuario.setRoles(roles);
     usuarioService.save(usuario);
     
