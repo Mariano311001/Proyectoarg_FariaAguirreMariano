@@ -9,15 +9,15 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
- authURL = 'https://backendmariano.herokuapp.com/'
+ authURL = 'https://backendmariano.herokuapp.com/auth'
 
   constructor(private httpClient: HttpClient) { }
 
   public nuevo(nuevoUsuario: NuevoUsuario): Observable<any>{
-    return this.httpClient.post<any>(this.authURL + '/auth/nuevo', nuevoUsuario);
+    return this.httpClient.post<any>(this.authURL + '/nuevo', nuevoUsuario);
   }
 
   public login(loginUsuario: LoginUsuario): Observable<JwtDto>{
-    return this.httpClient.post<JwtDto>(this.authURL + '/auth/login', loginUsuario);
+    return this.httpClient.post<JwtDto>(this.authURL + '/login', loginUsuario);
   }
 }
