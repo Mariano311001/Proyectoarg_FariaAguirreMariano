@@ -6,7 +6,7 @@ import { Observable} from 'rxjs';
   providedIn: 'root'
 })
 export class EducacionService {
-  URL = 'https://backendmariano.herokuapp.com/educacion/';
+  URL = 'https://git.heroku.com/backendmariano.git/educacion/';
 
   constructor(private httpClient : HttpClient) { }
 

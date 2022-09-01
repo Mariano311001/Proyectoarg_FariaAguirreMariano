@@ -6,7 +6,7 @@ import { Observable } from 'rxjs'
   providedIn: 'root'
 })
 export class SExperienciaService {
-  expURL ='https://backendmariano.herokuapp.com//explab/'
+  expURL ='https://git.heroku.com/backendmariano.git/explab/'
 
   constructor(private httpClient: HttpClient) { }
 
