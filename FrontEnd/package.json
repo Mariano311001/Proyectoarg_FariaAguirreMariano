@@ -1,5 +1,9 @@
 {
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.5"
+  },
+  "dependencies": {
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "firebase": "^9.9.3"
   }
 }
