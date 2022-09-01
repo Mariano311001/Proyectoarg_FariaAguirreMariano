@@ -1,0 +1,37 @@
+[debug] [2022-09-01T05:01:18.647Z] ----------------------------------------------------------------------
+[debug] [2022-09-01T05:01:18.650Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\faria\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2022-09-01T05:01:18.650Z] CLI Version:   11.8.0
+[debug] [2022-09-01T05:01:18.650Z] Platform:      win32
+[debug] [2022-09-01T05:01:18.650Z] Node Version:  v16.16.0
+[debug] [2022-09-01T05:01:18.676Z] Time:          Thu Sep 01 2022 02:01:18 GMT-0300 (hora estándar de Argentina)
+[debug] [2022-09-01T05:01:18.676Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-09-01T05:01:18.841Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-09-01T05:01:18.842Z] > authorizing via signed-in user (fariaaguirremariano@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2022-09-01T05:01:18.935Z] [hub] writing locator at C:\Users\faria\AppData\Local\Temp\hub-frontendmariano.json
+[debug] [2022-09-01T05:01:18.986Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/frontendmariano/sites 
+[debug] [2022-09-01T05:01:20.331Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/frontendmariano/sites 200
+[debug] [2022-09-01T05:01:20.331Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/frontendmariano/sites {"sites":[{"name":"projects/frontendmariano/sites/frontendmariano","defaultUrl":"https://frontendmariano.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2022-09-01T05:01:20.332Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/frontendmariano/webApps/-/config [none]
+[debug] [2022-09-01T05:01:21.436Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/frontendmariano/webApps/-/config 200
+[debug] [2022-09-01T05:01:21.436Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/frontendmariano/webApps/-/config {"projectId":"frontendmariano","storageBucket":"frontendmariano.appspot.com","apiKey":"AIzaSyAoAE05dH8x1f7omnWpYN0jDKqEA7AwiZ8","authDomain":"frontendmariano.firebaseapp.com","messagingSenderId":"695198331111"}
+[info] i  hosting: Serving hosting files from: y {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1my\u001b[22m"}}
+[info] +  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the emulated products have an interaction layer in Emulator UI or it cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ localhost:5000 │
+└──────────┴────────────────┘
+  Emulator Hub running at localhost:4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
+[debug] [2022-09-01T05:07:15.547Z] Received signal SIGHUP 1

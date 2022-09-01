@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package com.portfolio.Mariano.Controller;
 
 import com.portfolio.Mariano.Dto.dtoEducacion;
@@ -25,7 +22,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/educacion")
-@CrossOrigin(origins = "https://frontendmariano.web.app")
+@CrossOrigin(origins = "*")
 public class CEducacion {
     @Autowired
     Seducacion sEducacion;
