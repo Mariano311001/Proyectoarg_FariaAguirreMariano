@@ -2,6 +2,7 @@
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.5"
   },
+<<<<<<< HEAD
   "name": "frontend",
   "description": "This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.0.4.",
   "version": "1.0.2",
@@ -585,4 +586,11 @@
   },
   "author": "",
   "license": "ISC"
+=======
+  "dependencies": {
+    "@angular/platform-browser-dynamic": "^14.2.0",
+    "@angular/router": "^14.2.0",
+    "firebase": "^9.9.3"
+  }
+>>>>>>> add7773e03413a064f601e98b9d1f3f5ed14f70d
 }

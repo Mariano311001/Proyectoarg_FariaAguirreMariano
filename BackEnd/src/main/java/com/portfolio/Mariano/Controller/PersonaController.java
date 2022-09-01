@@ -28,13 +28,10 @@ public class PersonaController {
      return ipersonaService.getPersona();   
     }
     
-<<<<<<< HEAD
-      @PreAuthorize("hasRole('ADMIN')")
-    @PostMapping("/personas/crear")
-=======
+
     @PreAuthorize("hasRole('ADMIN')")
     @PostMapping("/crear")
->>>>>>> add7773e03413a064f601e98b9d1f3f5ed14f70d
+
     public String createPersona(@RequestBody Persona persona){
         ipersonaService.savePersona(persona);
         return "La persona fue creada correctamente";
