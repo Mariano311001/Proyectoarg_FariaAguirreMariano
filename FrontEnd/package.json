@@ -586,7 +586,7 @@
   "author": "",
   "license": "ISC"
 
-  "dependencies": {
+  ,"dependencies": {
     "@angular/platform-browser-dynamic": "^14.2.0",
     "@angular/router": "^14.2.0",
     "firebase": "^9.9.3"
