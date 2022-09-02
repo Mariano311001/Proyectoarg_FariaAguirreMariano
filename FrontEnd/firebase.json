@@ -1,14 +1,16 @@
 {
   "hosting": {
-<<<<<<< HEAD
-    "public": "dist/proyecto-faria-aguirre-mariano",
-=======
-    "public": "y",
->>>>>>> add7773e03413a064f601e98b9d1f3f5ed14f70d
+    "public": "dist",
     "ignore": [
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "rewrites": [
+      {
+        "source": "**",
+        "destination": "/index.html"
+      }
     ]
   }
 }
