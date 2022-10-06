@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PersonaService {
-  URL = 'https://git.heroku.com/backendmariano.git/personas/';
+  URL = 'https://backendmariano.herokuapp.com/personas/';
 
   constructor(private http: HttpClient) { }
   public getPersona(): Observable<persona>{

@@ -9,7 +9,7 @@ import { JwtDto } from '../model/jwt-dto';
   providedIn: 'root'
 })
 export class AuthService {
- authURL = 'https://git.heroku.com/backendmariano.git/auth'
+ authURL = 'https://backendmariano.herokuapp.com/auth'
 
   constructor(private httpClient: HttpClient) { }
 
